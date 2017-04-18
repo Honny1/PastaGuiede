@@ -16,9 +16,9 @@
         android:onClick="ukazSpagety"
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="35dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button2"
@@ -29,7 +29,7 @@
         android:onClick="ukazSpagety"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="183dp"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/button"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
 
@@ -44,7 +44,6 @@
         tools:layout_editor_absoluteY="350dp"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="16dp" />
+        android:layout_alignStart="@+id/button2" />
 
 </RelativeLayout>
