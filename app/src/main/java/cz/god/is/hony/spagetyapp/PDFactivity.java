@@ -1,11 +1,8 @@
 package cz.god.is.hony.spagetyapp;
 
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.github.barteksc.pdfviewer.PDFView;
-
-
 
 public class PDFactivity extends AppCompatActivity {
     PDFView pdfView;

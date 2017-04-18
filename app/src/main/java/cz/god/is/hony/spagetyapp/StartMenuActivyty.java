@@ -35,8 +35,6 @@ public class StartMenuActivyty extends AppCompatActivity {
 
         }
     }
-
-
 }
 
 
