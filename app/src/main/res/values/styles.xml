@@ -11,6 +11,9 @@
     <style name="FullscreenTheme1" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#ffaec9</item>
+        <item name="colorPrimaryDark">#ffaec9</item>
+        <item name="colorAccent">#ffaec9</item>
     </style>
 
 </resources>
