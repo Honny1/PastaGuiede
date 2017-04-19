@@ -32,6 +32,9 @@ public class StartMenuActivyty extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(), PDFactivity.class).putExtras(extras));
                 break;
 
+            case R.id.button4:
+                startActivity(new Intent(getBaseContext(), CalcActivity.class));
+                break;
 
         }
     }
