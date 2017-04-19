@@ -10,12 +10,40 @@
         android:id="@+id/checkbox_pasta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pasta"
+        android:text="@string/pasta"
         android:onClick="onCheckboxClicked"
         tools:layout_editor_absoluteY="16dp"
         tools:layout_editor_absoluteX="158dp"
-        android:layout_marginTop="28dp"
         android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/numberPicker1"
+        android:layout_alignStart="@+id/numberPicker1"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/selected_number_serving"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/Operace"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Operace"
+        android:layout_below="@+id/checkbox_pasta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp">
+    </Spinner>
+
+    <NumberPicker
+        android:id="@+id/numberPicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
