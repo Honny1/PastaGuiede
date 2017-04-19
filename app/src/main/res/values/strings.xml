@@ -4,11 +4,13 @@
     <string name="pagety_2">sýrová omáčka</string>
     <string name="pagety_3">boloňská omáčka</string>
     <string name="calc">calc</string>
-    <string name="pasta">Pasta</string>
+    <string name="pasta">špagety</string>
     <string name="pick">pick</string>
     <string name="selected_number_serving">Selected Number Serving</string>
     <string name="suroviny">suroviny</string>
     <string name="po_et_porc">Počet porcí</string>
+    <string name="pagety">špagety</string>
+    <string name="ingredience">ingredience</string>
     <string-array name="spinnerVyber">
         <item>Defult</item>
         <item>boloňská omáčka</item>
