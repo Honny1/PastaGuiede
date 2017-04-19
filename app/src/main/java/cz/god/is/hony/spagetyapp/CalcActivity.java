@@ -23,14 +23,14 @@ import android.widget.Toast;
 public class CalcActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;
     NumberPicker numberpicker;
-    TextView textview;
+    TextView textview, textview1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
         spinner=(Spinner) findViewById(R.id.Operace);
         numberpicker = (NumberPicker)findViewById(R.id.numberPicker1);
-        textview = (TextView)findViewById(R.id.textView1);
+        textview1 = (TextView)findViewById(R.id.textView2);
 
         ArrayAdapter adapter=ArrayAdapter.createFromResource(this,R.array.spinnerVyber, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
@@ -40,7 +40,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         numberpicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                textview.setText("Selected Value is : " + newVal);
+                textview1.setText("seznam surovin na: " + newVal+"porcí.");
             }
         });
     }
