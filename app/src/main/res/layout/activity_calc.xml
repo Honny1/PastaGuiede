@@ -35,7 +35,7 @@
         android:layout_below="@+id/Operace"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
-        android:text="Počet surovin"
+        android:text="@string/po_et_porc"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp" />
 
