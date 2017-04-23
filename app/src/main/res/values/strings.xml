@@ -11,6 +11,7 @@
     <string name="po_et_porc">Počet porcí</string>
     <string name="pagety">špagety</string>
     <string name="ingredience">ingredience</string>
+    <string name="back">BACK</string>
     <string-array name="spinnerVyber">
         <item>Defult</item>
         <item>boloňská omáčka</item>

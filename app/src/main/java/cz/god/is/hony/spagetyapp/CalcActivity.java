@@ -44,6 +44,8 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     int porce=0;
                     textview.setText("špagety: "+porce+"g");
                 }
+                if (omacka==0){
+                }
                 if (omacka==2){
                     int mleko=newVal*100;
                     int taveny=newVal*100;
@@ -51,7 +53,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     int sul=newVal*100;
                     int koreni=newVal*100;
                     int pepr=newVal*100;
-                    textview2.setText("mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
+                    textview2.setText("Mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
                 }
                 else if(omacka==1){
                     int maso=newVal*100;
@@ -64,7 +66,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     int oregano=newVal*100;
                     int cenek=newVal*100;
                     int cibule=newVal*100;
-                    textview2.setText("maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"q"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
+                    textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"q"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
                 }
                 textview1.setText("seznam surovin na: " + newVal+"porcí.");
             }

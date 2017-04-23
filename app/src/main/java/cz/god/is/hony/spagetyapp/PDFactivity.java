@@ -1,7 +1,10 @@
 package cz.god.is.hony.spagetyapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+
 import com.github.barteksc.pdfviewer.PDFView;
 
 public class PDFactivity extends AppCompatActivity {
@@ -26,6 +29,9 @@ public class PDFactivity extends AppCompatActivity {
                 pdfView.fromAsset("Ebook2.pdf").load();
                 break;
         }
+    }
+    public void back(View view) {
+        finish();
     }
 }
 

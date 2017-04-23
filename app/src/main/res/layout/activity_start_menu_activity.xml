@@ -9,8 +9,8 @@
     <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="350dp"
-        android:layout_height="145dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/pagety"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:onClick="ukazSpagety"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="350dp"
-        android:layout_height="145dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/pagety_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:onClick="ukazSpagety"
@@ -34,8 +34,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="350dp"
-        android:layout_height="145dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/pagety_3"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:onClick="ukazSpagety"
@@ -46,8 +46,8 @@
         android:layout_alignStart="@+id/button2" />
     <Button
         android:id="@+id/button4"
-        android:layout_width="350dp"
-        android:layout_height="145dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/calc"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:onClick="ukazSpagety"
