@@ -1,7 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <CheckBox
+        android:id="@+id/checkbox_pasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:onClick="onCheckboxClicked"
+
+        android:text="@string/pagety"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+    android:id="@+id/Operace"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_marginRight="11dp"
+    android:layout_marginEnd="11dp"
+    >
+
+</Spinner>
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="178dp"
+    android:layout_height="56dp"
+    android:text="@string/po_et_porc"
+    android:textColor="@android:color/background_dark"
+    android:textSize="30sp"
+
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<NumberPicker
+    android:id="@+id/numberPicker1"
+    android:layout_width="80dp"
+    android:layout_height="200dp"
+    android:layout_marginRight="38dp"
+    android:layout_marginEnd="38dp"
+    android:layout_below="@+id/checkbox_pasta"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="@string/suroviny"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="@android:color/background_dark"
+
+    android:layout_marginTop="17dp"
+    android:layout_below="@+id/checkbox_pasta" />
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/pagety"
+    android:textColor="@android:color/background_dark"
+    android:textSize="20sp"
+
+    android:layout_below="@+id/textView2"
+    android:layout_alignLeft="@+id/textView2"
+    android:layout_alignStart="@+id/textView2"
+    android:layout_marginTop="26dp" />
+
+<TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:text="@string/ingredience"
+    android:textColor="@android:color/background_dark"
+    android:textSize="20sp"
+
+
+    android:layout_below="@+id/textView3"
+    android:layout_alignLeft="@+id/textView3"
+    android:layout_alignStart="@+id/textView3"
+    android:layout_marginTop="32dp" />
+
+</RelativeLayout>
