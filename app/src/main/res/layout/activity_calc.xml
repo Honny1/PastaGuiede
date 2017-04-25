@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="cz.god.is.hony.spagetyapp.CalcActivity">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <CheckBox
         android:id="@+id/checkbox_pasta"
@@ -12,41 +9,33 @@
         android:layout_height="wrap_content"
         android:onClick="onCheckboxClicked"
         android:text="@string/pagety"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="ObsoleteLayoutParam"
-        android:layout_marginLeft="43dp"
-        android:layout_marginStart="43dp"
-        android:layout_alignParentTop="true"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp" />
 
     <Spinner
         android:id="@+id/Operace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="16dp"
-        tools:layout_editor_absoluteX="310dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_alignTop="@+id/checkbox_pasta"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView">
-
+        android:layout_marginTop="21dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/checkbox_pasta"
+        android:layout_alignLeft="@+id/checkbox_pasta"
+        android:layout_alignStart="@+id/checkbox_pasta">
     </Spinner>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="178dp"
-        android:layout_height="56dp"
+        android:layout_width="160dp"
+        android:layout_height="37dp"
         android:text="@string/po_et_porc"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
-        tools:layout_editor_absoluteY="69dp"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/checkbox_pasta"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -54,12 +43,11 @@
         android:id="@+id/numberPicker1"
         android:layout_width="80dp"
         android:layout_height="200dp"
-        android:layout_marginRight="31dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginTop="71dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/Operace"
-        android:layout_alignEnd="@+id/Operace" />
+        android:layout_marginRight="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_below="@+id/checkbox_pasta"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView2"
@@ -69,13 +57,11 @@
         android:text="@string/suroviny"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/background_dark"
-        tools:layout_editor_absoluteY="138dp"
-        tools:layout_editor_absoluteX="242dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Operace"
+        android:layout_alignLeft="@+id/Operace"
+        android:layout_alignStart="@+id/Operace" />
 
     <TextView
         android:id="@+id/textView3"
@@ -84,8 +70,6 @@
         android:text="@string/pagety"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
-        tools:layout_editor_absoluteY="232dp"
-        tools:layout_editor_absoluteX="239dp"
         android:layout_marginTop="25dp"
         android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/textView2"
@@ -95,15 +79,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="@string/ingredience"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
-        tools:layout_editor_absoluteY="303dp"
-        tools:layout_editor_absoluteX="239dp"
         android:layout_below="@+id/textView3"
         android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginTop="24dp" />
+        android:layout_alignStart="@+id/textView3" />
 
 </RelativeLayout>
