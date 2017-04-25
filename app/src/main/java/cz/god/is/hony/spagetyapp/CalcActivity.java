@@ -38,11 +38,11 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 if (spagety==1){
                     int porce=newVal*100;
-                    textview.setText("špagety: "+porce+"g");
+                    textview.setText("Špagety: "+porce+"g");
                 }
                 else if(spagety==2){
                     int porce=0;
-                    textview.setText("špagety: "+porce+"g");
+                    textview.setText("Špagety: "+porce+"g");
                 }
                 if (omacka==0){
                 }
@@ -66,9 +66,9 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                     int oregano=newVal*100;
                     int cenek=newVal*100;
                     int cibule=newVal*100;
-                    textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"q"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
+                    textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
                 }
-                textview1.setText("seznam surovin na: " + newVal+"porcí.");
+                textview1.setText("suroviny na: " + newVal+"porcí.");
             }
         });
     }
@@ -79,11 +79,9 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.checkbox_pasta:
                 if (checked){
                     spagety+=1;
-                    Toast.makeText(this,""+ spagety, Toast.LENGTH_SHORT).show();
                 }
                 else{
                     spagety+=2;
-                    Toast.makeText(this,""+ spagety, Toast.LENGTH_SHORT).show();
                     break;
                 }
         }
@@ -94,11 +92,11 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position) {
             case 1:
                 omacka+=1;
-                Toast.makeText(this, "Boloňská omáčka"+ omacka, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Boloňská omáčka", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
                 omacka+=2;
-                Toast.makeText(this, "Sýrová omáčka"+ omacka, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Sýrová omáčka", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

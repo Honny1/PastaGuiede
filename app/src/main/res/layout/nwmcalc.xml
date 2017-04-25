@@ -3,37 +3,38 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/checkbox_pasta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<CheckBox
+    android:id="@+id/checkbox_pasta"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="@string/pagety"
+    android:textSize="20sp"
+    android:layout_alignBaseline="@+id/textView"
+    android:layout_alignBottom="@+id/textView"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="33dp"
+    android:layout_marginStart="33dp" />
 
-        android:onClick="onCheckboxClicked"
-
-        android:text="@string/pagety"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
+<Spinner
     android:id="@+id/Operace"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
-    android:layout_marginRight="11dp"
-    android:layout_marginEnd="11dp"
-    >
-
+    android:layout_marginTop="21dp"
+    android:textSize="20sp"
+    android:layout_below="@+id/checkbox_pasta"
+    android:layout_alignLeft="@+id/checkbox_pasta"
+    android:layout_alignStart="@+id/checkbox_pasta">
 </Spinner>
 
 <TextView
     android:id="@+id/textView"
-    android:layout_width="178dp"
-    android:layout_height="56dp"
+    android:layout_width="160dp"
+    android:layout_height="37dp"
     android:text="@string/po_et_porc"
     android:textColor="@android:color/background_dark"
     android:textSize="30sp"
-
     android:layout_alignParentTop="true"
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true" />
@@ -56,9 +57,11 @@
     android:text="@string/suroviny"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:textColor="@android:color/background_dark"
-
-    android:layout_marginTop="17dp"
-    android:layout_below="@+id/checkbox_pasta" />
+    android:textSize="20sp"
+    android:layout_marginTop="25dp"
+    android:layout_below="@+id/Operace"
+    android:layout_alignLeft="@+id/Operace"
+    android:layout_alignStart="@+id/Operace" />
 
 <TextView
     android:id="@+id/textView3"
@@ -67,25 +70,20 @@
     android:text="@string/pagety"
     android:textColor="@android:color/background_dark"
     android:textSize="20sp"
-
+    android:layout_marginTop="25dp"
     android:layout_below="@+id/textView2"
     android:layout_alignLeft="@+id/textView2"
-    android:layout_alignStart="@+id/textView2"
-    android:layout_marginTop="26dp" />
+    android:layout_alignStart="@+id/textView2" />
 
 <TextView
     android:id="@+id/textView4"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-
     android:text="@string/ingredience"
     android:textColor="@android:color/background_dark"
     android:textSize="20sp"
-
-
     android:layout_below="@+id/textView3"
     android:layout_alignLeft="@+id/textView3"
-    android:layout_alignStart="@+id/textView3"
-    android:layout_marginTop="32dp" />
+    android:layout_alignStart="@+id/textView3" />
 
 </RelativeLayout>
