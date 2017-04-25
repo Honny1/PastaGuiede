@@ -21,7 +21,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calc);
+        setContentView(R.layout.nwmcalc);
         spinner=(Spinner) findViewById(R.id.Operace);
         numberpicker = (NumberPicker)findViewById(R.id.numberPicker1);
         textview1 = (TextView)findViewById(R.id.textView2);
