@@ -47,25 +47,25 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                 if (omacka==0){
                 }
                 if (omacka==2){
-                    int mleko=newVal*100;
-                    int taveny=newVal*100;
-                    int eidam=newVal*100;
-                    int sul=newVal*100;
-                    int koreni=newVal*100;
-                    int pepr=newVal*100;
+                    int mleko=newVal*50;
+                    int taveny=newVal*20;
+                    int eidam=newVal*30;
+                    int sul=newVal*10;
+                    int koreni=newVal*10;
+                    int pepr=newVal*10;
                     textview2.setText("Mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
                 }
                 else if(omacka==1){
-                    int maso=newVal*100;
+                    int maso=newVal*250;
                     int rajcata=newVal*100;
-                    int cukr=newVal*100;
-                    int sul=newVal*100;
-                    int koreni=newVal*100;
-                    int pepr=newVal*100;
-                    int paprika=newVal*100;
-                    int oregano=newVal*100;
-                    int cenek=newVal*100;
-                    int cibule=newVal*100;
+                    int cukr=newVal*10;
+                    int sul=newVal*10;
+                    int koreni=newVal*10;
+                    int pepr=newVal*10;
+                    int paprika=newVal*10;
+                    int oregano=newVal*10;
+                    int cenek=newVal*10;
+                    int cibule=newVal*10;
                     textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
                 }
                 textview1.setText("suroviny na: " + newVal+"porcí.");
