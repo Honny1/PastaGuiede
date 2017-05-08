@@ -38,37 +38,37 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 if (spagety==1){
                     int porce=newVal*100;
-                    textview.setText("≈†pagety: "+porce+"g");
+                    textview.setText("äpagety: "+porce+"g");
                 }
                 else if(spagety==2){
                     int porce=0;
-                    textview.setText("≈†pagety: "+porce+"g");
+                    textview.setText("äpagety: "+porce+"g");
                 }
                 if (omacka==0){
                 }
                 if (omacka==2){
-                    int mleko=newVal*50;
-                    int taveny=newVal*20;
-                    int eidam=newVal*30;
-                    int sul=newVal*10;
-                    int koreni=newVal*10;
-                    int pepr=newVal*10;
-                    textview2.setText("Ml√©ko: "+mleko+"ml"+"\nTaven√Ω s√Ωr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nS≈Øl: "+sul+"g"+"\nKo≈ôen√≠: "+koreni+"g"+"\nƒåern√Ω mlet√Ω pepr: "+pepr+"q");
+                    int mleko=newVal*1;
+                    int taveny=newVal*1;
+                    int eidam=newVal*1;
+                    int sul=newVal*0.05;
+                    int koreni=newVal*0.05;
+                    int pepr=newVal*0.05;
+                    textview2.setText("MlÈko: "+mleko+"ml"+"\nTaven˝ s˝r: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nS˘l: "+sul+"g"+"\nKo¯enÌ: "+koreni+"g"+"\n»ern˝ mlet˝ pepr: "+pepr+"q");
                 }
                 else if(omacka==1){
-                    int maso=newVal*250;
-                    int rajcata=newVal*100;
-                    int cukr=newVal*10;
-                    int sul=newVal*10;
-                    int koreni=newVal*10;
-                    int pepr=newVal*10;
-                    int paprika=newVal*10;
-                    int oregano=newVal*10;
-                    int cenek=newVal*10;
-                    int cibule=newVal*10;
-                    textview2.setText("Maso: "+maso+"g"+"\nPep≈ô: "+pepr+"g"+"\nKo≈ôen√≠ na ≈°pagety: "+koreni+"g"+"\nS≈Øl: "+sul+"g"+"\nRajƒçata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMlet√° paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nƒåesnek"+cenek+"g");
+                    int maso=newVal*1;
+                    int rajcata=newVal*0.75;
+                    int cukr=newVal*0.1;
+                    int sul=newVal*0.05;
+                    int koreni=newVal*0.1;
+                    int pepr=newVal*0.05;
+                    int paprika=newVal*0.15;
+                    int oregano=newVal*0.1;
+                    int cenek=newVal*0.2;
+                    int cibule=newVal*0.3;
+                    textview2.setText("Maso: "+maso+"g"+"\nPep¯: "+pepr+"g"+"\nKo¯enÌ na öpagety: "+koreni+"g"+"\nS˘l: "+sul+"g"+"\nRajËata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMlet· paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\n»esnek"+cenek+"g");
                 }
-                textview1.setText("suroviny na: " + newVal+"porc√≠.");
+                textview1.setText("suroviny na: " + newVal+"porcÌ.");
             }
         });
     }
@@ -92,11 +92,11 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position) {
             case 1:
                 omacka+=1;
-                Toast.makeText(this, "Bolo≈àsk√° om√°ƒçka", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "BoloÚsk· om·Ëka", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
                 omacka+=2;
-                Toast.makeText(this, "S√Ωrov√° om√°ƒçka", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "S˝rov· om·Ëka", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
