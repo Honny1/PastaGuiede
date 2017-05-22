@@ -19,8 +19,8 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     int spagety, omacka;
     double val;
     String output;
-    double[] pole;
-    String[] sur;
+    double[] omackaB, omackaS;
+    String[] surB, surS;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     }
      public void setIngedience(double newVal){
          if (spagety==1){
-             double porce=newVal*100;
+             double porce=newVal*200;
              customFormat("###", porce);
              textview.setText("Špagety: "+output+"g");
          }
@@ -94,13 +94,15 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
              textview2.setText("Omacka: N/A");
          }
          if (omacka==2){
-             double mleko=newVal;
-             double taveny=newVal;
-             double eidam=newVal;
+             double mleko=newVal*100;
+             double taveny=newVal*100;
+             double eidam=newVal*100;
              double sul=newVal*0.05;
              double koreni=newVal*0.05;
              double pepr=newVal*0.05;
-             textview2.setText("Mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
+             omackaS = new double[]{mleko, taveny, eidam, sul, koreni, pepr};
+             customFormat2("#.##");
+
          }
          else {
              if (omacka == 1) {
@@ -114,7 +116,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
                  double oregano = newVal * 0.1;
                  double cenek = newVal * 0.2;
                  double cibule = newVal * 0.3;
-                 pole = new double[]{maso, rajcata, cukr, sul, koreni, pepr, paprika, oregano, cenek, cibule};
+                 omackaB = new double[]{maso, rajcata, cukr, sul, koreni, pepr, paprika, oregano, cenek, cibule};
                  customFormat1("#.##");
              }
          }
@@ -128,17 +130,31 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
     public void customFormat1(String pattern) {
-        int lenpole=pole.length;
-        sur = new String[lenpole];
+        int lenpole=omackaB.length;
+        surB = new String[lenpole];
         for (int i = 0; i < lenpole; i++) {
             DecimalFormat myFormatter = new DecimalFormat(pattern);
-            String output1 = myFormatter.format(pole[i]);
-            sur[i] = output1;
+            String output1 = myFormatter.format(omackaB[i]);
+            surB[i] = output1;
         }
         seTText();
     }
     public void seTText(){
-        textview2.setText("Maso: " + sur[0] + "g" + "\nPepř: " + sur[1] + "g" + "\nKoření na špagety: " + sur[2] + "g" + "\nSůl: " + sur[3] + "g" + "\nRajčata: " + sur[4] + "g" + "\nCukr: " + sur[5] + "g" + "\nMletá paprika: " + sur[6] + "g" + "\nOregano: " + sur[7] + "g" + "\nCibule: " + sur[8] + "g" + "\nČesnek: " + sur[9] + "g");
+        textview2.setText("Maso: " + surB[0] + "g" + "\nPepř: " + surB[1] + "g" + "\nKoření na špagety: " + surB[2] + "g" + "\nSůl: " + surB[3] + "g" + "\nRajčata: " + surB[4] + "g" + "\nCukr: " + surB[5] + "g" + "\nMletá paprika: " + surB[6] + "g" + "\nOregano: " + surB[7] + "g" + "\nCibule: " + surB[8] + "g" + "\nČesnek: " + surB[9] + "g");
+    }
+    public void customFormat2(String pattern) {
+        int lenpole=omackaS.length;
+        surS = new String[lenpole];
+        for (int i = 0; i < lenpole; i++) {
+            DecimalFormat myFormatter = new DecimalFormat(pattern);
+            String output1 = myFormatter.format(omackaS[i]);
+            surS[i] = output1;
+        }
+        seTText1();
+    }
+    public void seTText1(){
+        textview2.setText("Mléko: "+surS[0]+"ml"+"\nTavený sýr: "+surS[1]+"g"+"\nEidam: "+surS[2]+"g"+"\nSůl: "+surS[3]+"g"+"\nKoření: "+surS[4]+"g"+"\nČerný mletý pepr: "+surS[5]+"g");
+
     }
 
 
