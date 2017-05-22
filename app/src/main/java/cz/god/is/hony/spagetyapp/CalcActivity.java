@@ -66,6 +66,9 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         omacka=0;
         switch (position) {
+            case 0:
+                setIngedience(val);
+                break;
             case 1:
                 omacka+=1;
                 setIngedience(val);

@@ -12,6 +12,8 @@
     <string name="pagety">špagety</string>
     <string name="ingredience">ingredience</string>
     <string name="back">BACK</string>
+    <string name="pagety_n_a">Špagety: N/A</string>
+    <string name="omacka_n_a">Omacka: N/A</string>
     <string-array name="spinnerVyber">
         <item>Omáčka</item>
         <item>Boloňská omáčka</item>
