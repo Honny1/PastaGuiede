@@ -1,5 +1,4 @@
 package cz.god.is.hony.spagetyapp;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +8,13 @@ import android.widget.CheckBox;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 public class CalcActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;
     NumberPicker numberpicker;
     TextView textview1, textview, textview2;
     int spagety, omacka;
+    double val;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -36,39 +34,8 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         numberpicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                if (spagety==1){
-                    int porce=newVal*100;
-                    textview.setText("Špagety: "+porce+"g");
-                }
-                else if(spagety==2){
-                    int porce=0;
-                    textview.setText("Špagety: "+porce+"g");
-                }
-                if (omacka==0){
-                }
-                if (omacka==2){
-                    int mleko=newVal;
-                    int taveny=newVal;
-                    int eidam=newVal;
-                    double sul=newVal*0.05;
-                    double koreni=newVal*0.05;
-                    double pepr=newVal*0.05;
-                    textview2.setText("Mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
-                }
-                else if(omacka==1){
-                    int maso=newVal;
-                    double rajcata=newVal*0.75;
-                    double cukr=newVal*0.1;
-                    double sul=newVal*0.05;
-                    double koreni=newVal*0.1;
-                    double pepr=newVal*0.05;
-                    double paprika=newVal*0.15;
-                    double oregano=newVal*0.1;
-                    double cenek=newVal*0.2;
-                    double cibule=newVal*0.3;
-                    textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
-                }
-                textview1.setText("suroviny na: " + newVal+"porcí.");
+                val=newVal;
+                setIngedience(val);
             }
         });
     }
@@ -79,9 +46,12 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.checkbox_pasta:
                 if (checked){
                     spagety+=1;
+                    setIngedience(val);
+                    break;
                 }
                 else{
                     spagety+=2;
+                    setIngedience(val);
                     break;
                 }
         }
@@ -92,11 +62,11 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position) {
             case 1:
                 omacka+=1;
-                Toast.makeText(this, "Boloňská omáčka", Toast.LENGTH_SHORT).show();
+                setIngedience(val);
                 break;
             case 2:
                 omacka+=2;
-                Toast.makeText(this, "Sýrová omáčka", Toast.LENGTH_SHORT).show();
+                setIngedience(val);
                 break;
         }
     }
@@ -105,4 +75,39 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+     public void setIngedience(double newVal){
+         if (spagety==1){
+             double porce=newVal*100;
+             textview.setText("Špagety: "+porce+"g");
+         }
+         else if(spagety==2){
+             textview.setText("Špagety: N/A");
+         }
+         if (omacka==0){
+             textview2.setText("Omacka: N/A");
+         }
+         if (omacka==2){
+             double mleko=newVal;
+             double taveny=newVal;
+             double eidam=newVal;
+             double sul=newVal*0.05;
+             double koreni=newVal*0.05;
+             double pepr=newVal*0.05;
+             textview2.setText("Mléko: "+mleko+"ml"+"\nTavený sýr: "+taveny+"g"+"\nEidam: "+eidam+"g"+"\nSůl: "+sul+"g"+"\nKoření: "+koreni+"g"+"\nČerný mletý pepr: "+pepr+"q");
+         }
+         else if(omacka==1){
+             double maso=newVal;
+             double rajcata=newVal*0.75;
+             double cukr=newVal*0.1;
+             double sul=newVal*0.05;
+             double koreni=newVal*0.1;
+             double pepr=newVal*0.05;
+             double paprika=newVal*0.15;
+             double oregano=newVal*0.1;
+             double cenek=newVal*0.2;
+             double cibule=newVal*0.3;
+             textview2.setText("Maso: "+maso+"g"+"\nPepř: "+pepr+"g"+"\nKoření na špagety: "+koreni+"g"+"\nSůl: "+sul+"g"+"\nRajčata: "+rajcata+"g"+"\nCukr: "+cukr+"g"+"\nMletá paprika: "+paprika+"g"+"\nOregano: "+oregano+"g"+"\nCibule"+cibule+"g"+"\nČesnek"+cenek+"g");
+         }
+         textview1.setText("suroviny na: " + newVal+"porcí.");
+     }
 }

@@ -13,8 +13,8 @@
     <string name="ingredience">ingredience</string>
     <string name="back">BACK</string>
     <string-array name="spinnerVyber">
-        <item>Defult</item>
-        <item>boloňská omáčka</item>
-        <item>sýrová omáčka</item>
+        <item>Omáčka</item>
+        <item>Boloňská omáčka</item>
+        <item>Sýrová omáčka</item>
     </string-array>
 </resources>
