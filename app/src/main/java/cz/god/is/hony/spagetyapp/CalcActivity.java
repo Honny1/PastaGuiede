@@ -84,6 +84,7 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
      public void setIngedience(double newVal){
          if (spagety==1){
              double porce=newVal*200;
@@ -159,6 +160,4 @@ public class CalcActivity extends AppCompatActivity implements AdapterView.OnIte
         textview2.setText("Mléko: "+surS[0]+"ml"+"\nTavený sýr: "+surS[1]+"g"+"\nEidam: "+surS[2]+"g"+"\nSůl: "+surS[3]+"g"+"\nKoření: "+surS[4]+"g"+"\nČerný mletý pepr: "+surS[5]+"g");
 
     }
-
-
 }
